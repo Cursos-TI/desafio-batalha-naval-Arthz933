@@ -28,7 +28,7 @@ int funcaobatalhanaval() {
 
 
     for (int l = 0; l < 10; l++) { // mostra as coluna de identificação com números
-        printf("%c ", 'A' + l);
+        printf("%d ", l);
 
         for (int c = 0; c < 10; c++) {
             printf("%d ", matriznavios[l][c]); // Mostra a matriz
