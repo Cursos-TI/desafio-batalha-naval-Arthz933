@@ -39,10 +39,50 @@ int funcaobatalhanaval() {
 
     printf("dica: sempre considere as coordenadas como um valor a menos, matrizes sempre começam do 0\n");
     
-
+    printf("----------------\n");
+    printf("matriz cone\n");
     
-    return 0;
-}
+    int matrizhabilidadecone[7][4] = {0};
+    
+
+    for(int l = 0; l < 4; l++) {
+        for(int c = 0; c < 7; c++) {
+            printf("%d ", matrizhabilidadecone[l][c]);
+
+        }
+        printf("\n");
+
+    }    
+
+    printf("----------------\n");
+    printf("matriz cruz\n");
+
+
+    int matrizhabilidadecruz[5][5] = {0};
+
+    for(int l = 0; l < 5; l++) {
+        for(int c = 0; c < 5; c++) {
+            printf("%d ", matrizhabilidadecruz[l][c]);
+
+        }
+        printf("\n");
+    }
+
+    printf("----------------\n");
+    printf("matriz octaedro\n");
+
+    int matrizhabilidadeoctaedro[9][9] = {0};
+
+    for(int l = 0; l < 9; l++) {
+        for(int c = 0; c < 9; c++) {
+            printf("%d ", matrizhabilidadeoctaedro[l][c]);
+        }
+        printf("\n");
+    }
+
+};
+
+
 
 int main() {
     funcaobatalhanaval();
