@@ -42,23 +42,48 @@ int funcaobatalhanaval() {
     printf("----------------\n");
     printf("matriz cone\n");
     
-    int matrizhabilidadecone[7][4] = {0};
+    int matrizhabilidadecone[4][7] = {0};
+
+    for(int c = 0; c < 7; c++) { // muda os valores da matriz para 1, conforme as áreas da habilidade
+        matrizhabilidadecone[3][c] = 1;
+        for(int c = 1; c < 6; c++)
+            matrizhabilidadecone[2][c] = 1;
+            for(int c = 2; c < 5; c++) {
+                matrizhabilidadecone[1][c] = 1;
+                for(int c = 3; c < 4; c++) {
+                    matrizhabilidadecone[0][c] = 1;
+
+                }
+
+            }
+            
+
+    }
     
 
     for(int l = 0; l < 4; l++) {
         for(int c = 0; c < 7; c++) {
-            printf("%d ", matrizhabilidadecone[l][c]);
+            printf("%d ", matrizhabilidadecone[l][c]); // imprime a matriz
 
         }
         printf("\n");
 
     }    
 
+    
+
     printf("----------------\n");
     printf("matriz cruz\n");
 
 
     int matrizhabilidadecruz[5][5] = {0};
+
+    for(int l = 0; l < 5; l++) {
+        matrizhabilidadecruz[l][2] = 1;
+        for(int c = 0; c < 5; c++) {
+            matrizhabilidadecruz[2][c] = 1;
+        }
+    }
 
     for(int l = 0; l < 5; l++) {
         for(int c = 0; c < 5; c++) {
@@ -68,12 +93,36 @@ int funcaobatalhanaval() {
         printf("\n");
     }
 
+    
+
     printf("----------------\n");
     printf("matriz octaedro\n");
 
-    int matrizhabilidadeoctaedro[9][9] = {0};
+    int matrizhabilidadeoctaedro[7][9] = {0};
 
-    for(int l = 0; l < 9; l++) {
+    for(int c = 4; c < 5; c++) {
+        matrizhabilidadeoctaedro[0][4] = 1;
+        for(int c = 3; c < 6; c++) {
+            matrizhabilidadeoctaedro[1][c] = 1;
+            for(int c = 2; c < 7; c++) {
+                matrizhabilidadeoctaedro[2][c] = 1;
+                for(int c = 1; c < 8; c++) {
+                    matrizhabilidadeoctaedro[3][c] = 1;
+                for(int c = 2; c < 7; c++) {
+                    matrizhabilidadeoctaedro[4][c] = 1;
+            for(int c = 3; c < 6; c++) {
+                matrizhabilidadeoctaedro[5][c] = 1;
+        for(int c = 4; c < 5; c++) {
+            matrizhabilidadeoctaedro[6][c] = 1;
+        }
+            }
+                }
+                }
+            }
+        }
+    }
+
+    for(int l = 0; l < 7; l++) {
         for(int c = 0; c < 9; c++) {
             printf("%d ", matrizhabilidadeoctaedro[l][c]);
         }
